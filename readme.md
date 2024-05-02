@@ -41,7 +41,7 @@ the tool implements a mini command + manual framework; use the `man` command for
 
 ![image](https://github.com/dyxribo/termini_as3/assets/6477128/9cf6a374-000a-436f-a59b-3a1fe1bb50f8)
 
-**NOTE**: Manuals and commands can be edited/added in `src/net/blaxstar/termini/commands/Manuals.as`.
+**NOTE**: Manuals can be edited/added in `src/net/blaxstar/termini/commands/Manuals.as`; commands can also be measured within the same folder.
 
 ## BUILT-IN GREP
 - as seen above, built in `grep` command for looging for patterns in text and files; also supports recursive file pattern searching! for example:
