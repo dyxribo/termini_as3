@@ -10,6 +10,14 @@
       },
       "problemMatcher": [],
       "label": "ActionScript: compile debug - asconfig.json"
+    },
+    {
+      "type": "actionscript",
+      "debug": false,
+      "asconfig": "asconfig.swcbuild.json",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "ActionScript: compile SWC"
     }
   ]
 }

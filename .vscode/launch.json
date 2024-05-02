@@ -10,5 +10,6 @@
 			"name": "Launch SWF",
       "preLaunchTask": "ActionScript: compile debug - asconfig.json"
 		},
+    
 	]
 }

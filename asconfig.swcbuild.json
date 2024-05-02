@@ -1,0 +1,13 @@
+{
+	"type": "lib",
+	"config": "air",
+	"compilerOptions": {
+		"source-path": [
+			"src"
+		],
+		"include-sources": [
+			"thirdparty"
+		],
+		"output": "bin/termini_1.0.swc"
+	}
+}
