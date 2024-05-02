@@ -11,7 +11,6 @@ package net.blaxstar.starlib.components {
 
     import net.blaxstar.starlib.style.Font;
     import net.blaxstar.starlib.style.Style;
-    import net.blaxstar.starlib.math.Arithmetic;
     import net.blaxstar.starlib.utils.Strings;
 
     /**

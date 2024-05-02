@@ -18,7 +18,12 @@ You can also set a trigger key that allows you to open and close your Termini in
 mini_terminal.open_key = mini_terminal.keys.F1;
 ```
 
-now start your application and press your trigger key-- termini will appear at the top your your display object!
+now start your application and press your trigger key-- termini will appear at the top your your display object! test it out by printing the version you have:
+
+```
+print -v
+// prints `v1.x.x`
+```
 
 ## FEATURES
 
