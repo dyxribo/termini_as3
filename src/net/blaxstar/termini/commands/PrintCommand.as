@@ -16,7 +16,7 @@ package net.blaxstar.termini.commands {
               if (Strings.trim(string) === "-v") {
                 return Termini.VERSION_STRING;
               }
-              full_string = full_string.concat(string);
+              full_string = full_string.concat(" " + string);
             }
 
             

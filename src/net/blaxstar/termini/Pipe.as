@@ -92,7 +92,7 @@ package net.blaxstar.termini {
             var command_0_output:* = command_0.execute();
             var piped_arguments:Array = [];
 
-            piped_arguments = (command_1.argument_array.length) ? command_1.argument_array : piped_arguments.concat(command_0_output);
+            piped_arguments = (command_1.argument_array.length > 0) ? command_1.argument_array.concat(command_0_output) : piped_arguments.concat(command_0_output);
             command_1.set_args(piped_arguments);
 
             return command_1.execute();

@@ -47,7 +47,7 @@ package net.blaxstar.starlib.components {
             _textfield.gridFitType = GridFitType.PIXEL;
             _textfield.thickness = 0;
             _textfield.sharpness = 400;
-            _textfield.selectable = _textfield.border = _textfield.multiline = _textfield.wordWrap = _textfield.mouseEnabled = _textfield.selectable = false;
+            _textfield.selectable = _textfield.border = _textfield.multiline = _textfield.wordWrap = _textfield.mouseEnabled = false;
             _textfield.defaultTextFormat = _text_format;
             _textfield.autoSize = TextFieldAutoSize.LEFT;
             _textfield.text = _textfield_string;

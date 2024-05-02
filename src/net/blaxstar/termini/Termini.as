@@ -283,7 +283,6 @@ package net.blaxstar.termini {
         private function draw_input_field(manpage_scale:Boolean=false):void {
             _input_field.width = _output_field.width = (stage.stageWidth - (Component.PADDING * 2));
             _output_field.move(10, _input_field.height);
-
         }
 
         private function draw_background(scale_fullscreen:Boolean=false):void {
