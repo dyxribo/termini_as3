@@ -1,9 +1,10 @@
 # Termini
-### miniature debugging terminal for AS3/AIR
+### *miniature debugging terminal for AS3/AIR*
+
 
 Termini is a slim debugging terminal that appears at the top of a display object (seperate container at stage index numChildren-1 recommended). it has support for custom commands through an extendable `TerminalCommand` class. it also supports piping values from multiple commands together.
 
-## USAGE
+# USAGE
 To use termini, simply create an instance of the `Termini` class and add it to your display object container:
 
 ```
@@ -20,50 +21,30 @@ mini_terminal.open_key = mini_terminal.keys.F1;
 
 now start your application and press your trigger key-- termini will appear at the top your your display object! test it out by printing the version you have:
 
-```
-print -v
-// prints `v1.x.x`
-```
+![image](https://github.com/dyxribo/termini_as3/assets/6477128/e7da59bd-e100-4bd8-85f9-2821e8d99b1a)
 
-## FEATURES
+
+# FEATURES
 
 Termini has some cool features (if i do say so myself):
 
-- Extendable `TerminalCommand` class for creating your own custom commands, only limited by imagination (see `src/net/blaxstar/termini/commands` folder for examples)
+## EXTENDABLE `TerminalCommand` CLASS 
+create your own custom commands, only limited by imagination (see `src/net/blaxstar/termini/commands` folder for examples)
 
 
-- Pipe support for chaining command outputs ex:
-`add 5 5 | print five plus five equals` prints `"five plus five equals 10"`
-- default commands and a mini command `manual` framework; use the `man` command for fullscreen descriptions of commands ex: `man grep` will display the following:
+## PIPE SUPPORT FOR CHAINING COMMAND OUTPUTS
 
-```
-NAME:
+![image](https://github.com/dyxribo/termini_as3/assets/6477128/ec1b476e-7433-469b-b6e5-9a65cfcfdeef)
 
-	grep - print lines that match patterns
+## DEFAULT COMMANDS + MANUALS
+the tool implements a mini command + manual framework; use the `man` command for fullscreen descriptions of commands ex: `man grep` will display the following (semi-transparent):
 
-SYNOPSIS:
+![image](https://github.com/dyxribo/termini_as3/assets/6477128/9cf6a374-000a-436f-a59b-3a1fe1bb50f8)
 
-	grep PATTERN ... [FILE]
+**NOTE**: Manuals can be edited/added in `src/net/blaxstar/termini/commands/Manuals.as`.
 
-DESCRIPTION:
-
-	grep searches for PATTERNS in each FILE.  PATTERN is a single pattern, and grep prints each line (seperated by pipes) that matches that pattern. pattern should not be quoted. if a file is provided, it will search the file. if the file contains a URL to another file that is on the system, it will search recursively for the matching pattern through each file and concatenate all the results from all files.
-	the following are examples of usage:
-
-	grep b apple bottom jeans boots with the fur
-	// bottom | boots
-
-	grep b c:\file.txt
-	// returns every line in c:\file.txt containing `b`
-
-	// in c:\file.txt:  d:\other_file.txt <newline> e:\other_file.txt
-	grep a c:\file.txt
-	// returns every line in c:\file.txt, d:\other_file.txt, and e:\other_file.txt containing `a`
-
-press the toggle key or type any other non-man command to revert back to normal size.
-```
-
-- built in `grep` command for looging for patterns in text and files; also supports recursive file pattern searching! for example:
+## BUILT-IN GREP
+- as seen above, built in `grep` command for looging for patterns in text and files; also supports recursive file pattern searching! for example:
 
 ```
 // text file in c:\test.txt:
@@ -93,7 +74,8 @@ grep pattern c:\test.txt | print this is a printed string before the pipe.
 
 this is a printed string before the pipe. hello from pattern in root text file! | hello from pattern in test0.txt! | hello from pattern in test1.txt! | hello from pattern in test2.txt!
 ```
-- register objects to the `eval` command in order to access their properties at runtime! this is great for game development:
+## BUILT-IN EVAL COMMAND
+register objects to the `eval` command in order to access their properties at runtime! this is great for game development:
 
 ```
 EvalObjectCommand.register_object("main_character", main_character_sprite);
@@ -103,6 +85,11 @@ EvalObjectCommand.register_object("main_character", main_character_sprite);
 eval main_character.x
 // prints the main_character_sprite's x position
 ```
+
+it supports nested properties as well:
+
+![image](https://github.com/dyxribo/termini_as3/assets/6477128/01e3c39c-64ca-49c5-aa1e-fc769ef7b057)
+
 
 this command doesnt yet support setting values at runtime just yet (just haven't gotten around to implementing the command yet), but it is on the list!
 
