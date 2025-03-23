@@ -44,7 +44,7 @@ the tool implements a mini command + manual framework; use the `man` command for
 **NOTE**: Manuals can be edited/added in `src/net/blaxstar/termini/commands/Manuals.as`; commands can also be modified within the same folder.
 
 ## BUILT-IN GREP
-- as seen above, built in `grep` command for looging for patterns in text and files; also supports recursive file pattern searching! for example:
+- as seen above, built in `grep` command for looking for patterns in text and files; also supports recursive file pattern searching! for example:
 
 ```
 // text file in c:\test.txt:
